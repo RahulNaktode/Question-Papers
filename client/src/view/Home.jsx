@@ -17,7 +17,7 @@ function Home() {
         
         <h2>Select a Department</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginTop: '20px' }}>
-          <Link to="/departements/aero" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+          <Link to="/aero" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
             <h3>Aeronautical Engineering</h3>
           </Link>
           <Link to="/departements/civil" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>

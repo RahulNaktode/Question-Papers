@@ -8,6 +8,7 @@ import Electronics from './view/Departements/DataScience.jsx'
 import Electrical from './view/Departements/Electrical.jsx'
 import Mechanical from './view/Departements/Mechanical.jsx'
 import Civil from './view/Departements/Civil.jsx'
+import Aero from './view/Departements/Aero.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
     <Route path="/eee" element={<Electrical />} />
     <Route path="/mechanical" element={<Mechanical />} />
     <Route path="/civil" element={<Civil />} />
+    <Route path="/aero" element={<Aero />} />
   </Routes>
   </BrowserRouter>
 )

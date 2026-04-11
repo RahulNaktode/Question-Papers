@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import { getHome, getHealth } from './controllers/health.js'
 import connectDB from './db.js'
+import { getQuestions, postQuestion } from './controllers/question.js'
 
 dotenv.config()
 
@@ -14,6 +15,9 @@ const PORT = process.env.PORT || 8030
 
 app.get('/', getHome)
 app.get('/health', getHealth)
+
+app.get('/questions', getQuestions)
+app.post('/questions', postQuestion)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)

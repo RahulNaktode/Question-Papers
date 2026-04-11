@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/Navbar'
+import Input from '../../components/Input'
 
 function Aero() {
   const [uploadedPapers, setUploadedPapers] = useState([])
@@ -77,15 +78,6 @@ function Aero() {
         <div style={{ background: '#e3f2fd', padding: '30px', borderRadius: '10px', marginBottom: '40px' }}>
           <h2>📤 Upload Question Papers & Photos</h2>
           <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '15px' }}>
-            <input 
-              type="text" 
-              name="studentName" 
-              placeholder="Your Name" 
-              value={formData.studentName}
-              onChange={handleInputChange}
-              style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '5px', fontSize: '14px' }}
-              required
-            />
             <select 
               name="semester" 
               value={formData.semester}
@@ -99,7 +91,7 @@ function Aero() {
               <option value="3">Semester 3</option>
               <option value="4">Semester 4</option>
             </select>
-            <input 
+            <Input 
               type="text" 
               name="subject" 
               placeholder="Subject Name (e.g., Data Structures)" 
@@ -109,17 +101,6 @@ function Aero() {
               required
             />
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>📄 Upload Paper (PDF)</label>
-                <input 
-                  type="file" 
-                  name="file" 
-                  accept=".pdf" 
-                  onChange={handleFileChange}
-                  style={{ padding: '8px', border: '1px solid #ccc', borderRadius: '5px', width: '100%' }}
-                  required
-                />
-              </div>
               <div>
                 <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>📸 Upload Photo</label>
                 <input 
