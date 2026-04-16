@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Button({title, size = "large", varient = "primary", onClick}) {
+function Button({ title, size = "large", varient = "primary", onClick }) {
 
   const SIZE_CLASSES = {
     small: 'px-2 py-1 text-xs mx-2',

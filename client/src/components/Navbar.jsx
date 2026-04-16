@@ -15,7 +15,7 @@ function Navbar() {
 
         {/* Dropdown Section */}
         <div className='relative'>
-          <button 
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className='flex items-center gap-2 text-white font-medium focus:outline-none'
           >
