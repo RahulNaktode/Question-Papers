@@ -6,7 +6,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className='max-w-[85%] bg-blue-400 rounded-full px-10 py-3 mx-auto sticky top-3 flex items-center shadow-lg'>
+    <nav className='max-w-[85%] bg-blue-400 rounded-full px-10 py-3 mx-auto sticky top-3 flex items-center shadow-lg z-50'>
       <div className='flex items-center gap-12'>
         {/* Logo Section */}
         <div className='text-white'>
