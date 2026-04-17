@@ -110,10 +110,17 @@ function Aero() {
       return;
     }
 
-    const response = await axios.post('http://localhost:8030/questions', formData)
+    const dataToSend = { 
+    ...formData, 
+    department: "Aero" // Department field set karein
+  };
+
+    const response = await axios.post('http://localhost:8030/questions', dataToSend);
+    
     if (response.data.success) {
       toast.success('Question paper uploaded successfully');
       setFormData({
+        department: "Aero", // Department field set karein
         subject: "",
         semester: "",
         year: "",
@@ -126,15 +133,17 @@ function Aero() {
   }
 
   const getQuestionPapers = async () => {
-    try {
-      const response = await axios.get('http://localhost:8030/questions')
-      if (response.data.success) {
-        setUploadedPapers(response.data.data)
-      }
-    } catch (error) {
-      console.error("Error fetching papers:", error);
+  try {
+    const response = await axios.get('http://localhost:8030/questions', {
+      params: { department: "Aero" } // Yeh backend mein ?department=Aero ban jayega
+    });
+    if (response.data.success) {
+      setUploadedPapers(response.data.data);
     }
+  } catch (error) {
+    console.error("Error fetching papers:", error);
   }
+};
 
   return (
     <div className='bg-gray-50 min-h-screen'>

@@ -1,6 +1,10 @@
 import { Schema, model } from 'mongoose';
 
 const questionSchema = new Schema({
+    department: {
+        type: String,
+        required: true,
+    },
     subject: {
         type: String,
         required: true,
