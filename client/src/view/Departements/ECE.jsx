@@ -13,7 +13,7 @@ import PhotoViwer from '../../components/PhotoViwer';
 import Button from '../../components/Button';
 import toast, { Toaster } from 'react-hot-toast';
 
-function BioTechnology() {
+function ECE() {
   const [uploadedPapers, setUploadedPapers] = useState([])
   const [formData, setFormData] = useState({
     subject: "",
@@ -112,7 +112,7 @@ function BioTechnology() {
 
     const dataToSend = { 
     ...formData, 
-    department: "BioTechnology" // Department field set karein
+    department: "ECE" // Department field set karein
   };
 
     const response = await axios.post('http://localhost:8030/questions', dataToSend);
@@ -120,7 +120,7 @@ function BioTechnology() {
     if (response.data.success) {
       toast.success('Question paper uploaded successfully');
       setFormData({
-        department: "BioTechnology", // Department field set karein
+        department: "ECE", // Department field set karein
         subject: "",
         semester: "",
         year: "",
@@ -135,7 +135,7 @@ function BioTechnology() {
   const getQuestionPapers = async () => {
   try {
     const response = await axios.get('http://localhost:8030/questions', {
-      params: { department: "Biotechnology" } // Yeh backend mein ?department=Aero ban jayega
+      params: { department: "ECE" } // Yeh backend mein ?department=Aero ban jayega
     });
     if (response.data.success) {
       setUploadedPapers(response.data.data);
@@ -149,7 +149,7 @@ function BioTechnology() {
     <div className='bg-gray-50 min-h-screen'>
       <Navbar />
       <div className='p-4 max-w-7xl mx-auto'>
-        <h1>👩‍🔬 BioTechnology</h1>
+        <h1>🔌 Electronics & Communication Engineering</h1>
         <p className='text-gray-500 mb-3'>
           Complete semester-wise question papers and study materials for Aero
         </p>
@@ -246,4 +246,4 @@ function BioTechnology() {
   )
 }
 
-export default BioTechnology
+export default ECE
