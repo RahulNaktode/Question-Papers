@@ -9,6 +9,11 @@ import Electrical from './view/Departements/Electrical.jsx'
 import Mechanical from './view/Departements/Mechanical.jsx'
 import Civil from './view/Departements/Civil.jsx'
 import Aero from './view/Departements/Aero.jsx'
+import InformationTechnology from './view/Departements/InformationTechnology.jsx'
+import DataScience from './view/Departements/DataScience.jsx'
+import ArtificialIntelligence from './view/Departements/AIML.jsx'
+import Biotechnology from './view/Departements/BioTechnology.jsx'
+import FirstYear from './view/Departements/FirstYear.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -20,6 +25,11 @@ createRoot(document.getElementById('root')).render(
     <Route path="/mechanical" element={<Mechanical />} />
     <Route path="/civil" element={<Civil />} />
     <Route path="/aero" element={<Aero />} />
+    <Route path='/it' element={<InformationTechnology />} />
+    <Route path='/ds' element={<DataScience />} />
+    <Route path='/aiml' element={<ArtificialIntelligence />} />
+    <Route path='/biotech' element={<Biotechnology />} />
+    <Route path='/firstyear' element={<FirstYear />} />
   </Routes>
   </BrowserRouter>
 )

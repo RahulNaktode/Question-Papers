@@ -6,41 +6,54 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div style={{ padding: '20px', background: '#4CAF50', color: 'white', textAlign: 'center', fontSize: '18px', fontWeight: 'bold' }}>
+      <div className='bg-green-600 text-white p-3 text-center font-bold text-2xl mt-2'>
         ✅ All Semester Questions Are Available Now!
       </div>
-      <div style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <div className='max-w-7xl mx-auto p-5'>
         <h1>Welcome to Semester Questions</h1>
-        <p style={{ fontSize: '18px', color: '#555', marginBottom: '30px' }}>
+        <p className='text-gray-500 my-3 '>
           Access department-wise semester question papers and study materials
         </p>
         
         <h2>Select a Department</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginTop: '20px' }}>
-          <Link to="/aero" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4 '>
+          <Link to="/aero" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
             <h3>Aeronautical Engineering</h3>
           </Link>
-          <Link to="/departements/civil" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+          <Link to="/civil" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
             <h3>Civil Engineering</h3>
           </Link>
-          <Link to="/departements/cse" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+          <Link to="/cse" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
             <h3>Computer Science</h3>
           </Link>
-          <Link to="/departements/ds" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+          <Link to="/ds" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
             <h3>Data Science</h3>
           </Link>
-          <Link to="/departements/electrical" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+          <Link to="/electrical" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
             <h3>Electrical Engineering</h3>
           </Link>
-          <Link to="/departements/it" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+          <Link to="/it" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
             <h3>Information Technology</h3>
           </Link>
-          <Link to="/departements/mechanical" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textDecoration: 'none', color: '#333', background: '#f9f9f9' }}>
+          <Link to="/mechanical" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
             <h3>Mechanical Engineering</h3>
+          </Link>
+          <Link to="/aiml" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
+            <h3>Artificial Intelligence & Machine Learning</h3>
+          </Link>
+          <Link to="/biotech" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
+            <h3>Biotechnology</h3>
+          </Link>
+          <Link to="/ece" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
+            <h3>Electronics & Communication Engineering</h3>
+          </Link>
+          <Link to="/firstyear" className='p-5 border border-gray-300 rounded-lg text-center bg-gray-100 hover:bg-gray-200 transition'>
+            <h3>First Year</h3>
           </Link>
         </div>
 
-        <div style={{ marginTop: '50px', padding: '30px', background: '#f0f4f8', borderRadius: '8px' }}>
+
+        <div className='bg-[#f0f4f8] p-5 rounded-lg mt-10 '>
           <h2>Why Choose Us?</h2>
           <ul style={{ fontSize: '16px', lineHeight: '1.8', color: '#555' }}>
             <li>📚 Comprehensive collection of previous semester question papers</li>
@@ -50,7 +63,7 @@ function Home() {
           </ul>
         </div>
 
-        <div style={{ marginTop: '30px', padding: '30px', background: '#fff3cd', borderRadius: '8px' }}>
+        <div className='bg-[#fff3cd] p-5 rounded-lg mt-10 '>
           <h2>How to Use</h2>
           <ol style={{ fontSize: '16px', lineHeight: '1.8', color: '#555' }}>
             <li>Select your department from the list above</li>
@@ -60,8 +73,8 @@ function Home() {
           </ol>
         </div>
 
-        <div style={{ marginTop: '30px', padding: '20px', background: '#e8f5e9', borderRadius: '8px', textAlign: 'center' }}>
-          <p style={{ fontSize: '14px', color: '#666' }}>
+        <div className='bg-[#e8f5e9] p-5 rounded-lg mt-10 flex items-center justify-center'>
+          <p className='text-[#555] font-[16px]'>
             📧 For any queries or to contribute question papers, contact us at <strong>support@semesterquestions.com</strong>
           </p>
         </div>
