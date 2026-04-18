@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router'
+import Button from '../components/Button'
 
 function Home() {
   return (
@@ -75,7 +76,7 @@ function Home() {
 
         <div className='bg-[#e8f5e9] p-5 rounded-lg mt-10 flex items-center justify-center'>
           <p className='text-[#555] font-[16px]'>
-            📧 For any queries or to contribute question papers, contact us at <strong>support@semesterquestions.com</strong>
+            📧 For any queries or to contribute question papers, contact us at <strong>rynaktode11@gmail.com</strong>
           </p>
         </div>
       </div>

@@ -14,11 +14,13 @@ import DataScience from './view/Departements/DataScience.jsx'
 import ArtificialIntelligence from './view/Departements/AIML.jsx'
 import Biotechnology from './view/Departements/BioTechnology.jsx'
 import FirstYear from './view/Departements/FirstYear.jsx'
+import { Contact } from 'lucide-react'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <Routes>
     <Route path="/" element={<Home />} />
+    <Route path='/contact' element={<Contact />} />
     <Route path="/cse" element={<ComputerScience />} />
     <Route path="/ece" element={<Electronics />} />
     <Route path="/eee" element={<Electrical />} />
