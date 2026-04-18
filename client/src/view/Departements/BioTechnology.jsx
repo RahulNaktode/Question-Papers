@@ -127,13 +127,7 @@ function BioTechnology() {
           </div>
 
           <div className='w-full md:w-80'>
-            <input 
-              type="text"
-              placeholder="Search Subject or Semester..."
-              className="w-full p-2 border-2 border-green-100 rounded-lg focus:border-green-500 outline-none shadow-sm"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </div>
         </div>
 

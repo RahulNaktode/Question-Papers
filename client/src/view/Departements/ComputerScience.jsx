@@ -12,6 +12,7 @@ import {
 import PhotoViwer from '../../components/PhotoViwer';
 import Button from '../../components/Button';
 import toast, { Toaster } from 'react-hot-toast';
+import Search from '../../components/Search';
 
 function ComputerScience() {
   const [uploadedPapers, setUploadedPapers] = useState([])
@@ -127,13 +128,7 @@ function ComputerScience() {
           </div>
 
           <div className='w-full md:w-80'>
-            <input 
-              type="text"
-              placeholder="🔍 Search subject or semester..."
-              className="w-full p-2 border-2 border-gray-200 rounded-lg focus:border-blue-500 outline-none shadow-sm transition-colors"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </div>
         </div>
 

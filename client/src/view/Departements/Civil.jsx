@@ -132,13 +132,7 @@ function Civil() {
           </div>
 
           <div className='w-full md:w-80'>
-            <input 
-              type="text"
-              placeholder="🔍 Search by subject or semester..."
-              className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none shadow-sm transition-all"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </div>
         </div>
 

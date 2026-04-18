@@ -132,13 +132,7 @@ function Mechanical() {
           </div>
 
           <div className='w-full md:w-80'>
-            <input 
-              type="text"
-              placeholder="🔍 Search subject or semester..."
-              className="w-full p-2 border-2 border-gray-200 rounded-lg focus:border-blue-500 outline-none shadow-sm transition-all"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </div>
         </div>
 

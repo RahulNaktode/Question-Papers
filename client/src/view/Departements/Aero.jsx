@@ -12,6 +12,7 @@ import {
 import PhotoViwer from '../../components/PhotoViwer';
 import Button from '../../components/Button';
 import toast, { Toaster } from 'react-hot-toast';
+import Search from '../../components/Search';
 
 function Aero() {
   const [uploadedPapers, setUploadedPapers] = useState([])
@@ -125,13 +126,7 @@ function Aero() {
           
           {/* SEARCH BAR UI */}
           <div className="w-full md:w-1/3">
-            <input 
-              type="text"
-              placeholder="Search by subject or semester..."
-              className="w-full p-2 border-2 border-blue-200 rounded-lg focus:border-blue-500 outline-none shadow-sm"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </div>
         </div>
 
