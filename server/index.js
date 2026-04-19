@@ -5,6 +5,7 @@ import ImageKit from "@imagekit/nodejs";
 import { getHome, getHealth } from './controllers/health.js'
 import connectDB from './db.js'
 import { getQuestions, postQuestion } from './controllers/question.js'
+import { postSupport } from './controllers/support.js'
 
 dotenv.config()
 
@@ -29,6 +30,8 @@ app.get('/health', getHealth)
 
 app.get('/questions', getQuestions)
 app.post('/questions', postQuestion)
+
+app.post('/support', postSupport)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)

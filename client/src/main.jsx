@@ -14,7 +14,7 @@ import DataScience from './view/Departements/DataScience.jsx'
 import ArtificialIntelligence from './view/Departements/AIML.jsx'
 import Biotechnology from './view/Departements/BioTechnology.jsx'
 import FirstYear from './view/Departements/FirstYear.jsx'
-import { Contact } from 'lucide-react'
+import Contact from './view/Contact.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
