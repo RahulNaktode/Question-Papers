@@ -12,6 +12,7 @@ import {
 import PhotoViwer from '../../components/PhotoViwer';
 import Button from '../../components/Button';
 import toast, { Toaster } from 'react-hot-toast';
+import Search from '../../components/Search';
 
 function Civil() {
   const [uploadedPapers, setUploadedPapers] = useState([])
@@ -124,7 +125,6 @@ function Civil() {
       <Navbar />
       <div className='p-4 max-w-7xl mx-auto'>
         
-        {/* Header and Search Section */}
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6'>
           <div>
             <h1 className='text-2xl font-bold'>🏗️ Civil Engineering</h1>
@@ -136,7 +136,6 @@ function Civil() {
           </div>
         </div>
 
-        {/* Papers Display Grid */}
         <div className='my-10'>
           <h2 className='text-xl font-bold mb-4'>🎓 Student Uploaded Papers</h2>
           {filteredPapers.length > 0 ? (

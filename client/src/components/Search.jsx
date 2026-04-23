@@ -1,8 +1,6 @@
 import React from 'react'
 import Input from './Input'
 
-// We pass searchTerm and setSearchTerm as props so the parent 
-// component stays in control of the state.
 function Search({ searchTerm, setSearchTerm }) {
   return (
     <div className="w-full md:w-80">
@@ -14,7 +12,6 @@ function Search({ searchTerm, setSearchTerm }) {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        {/* Optional: Clear button if text exists */}
         {searchTerm && (
           <button 
             onClick={() => setSearchTerm("")}

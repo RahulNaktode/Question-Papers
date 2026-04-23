@@ -120,7 +120,6 @@ function ComputerScience() {
       <Navbar />
       <div className='p-4 max-w-7xl mx-auto'>
         
-        {/* Header and Search Bar */}
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6'>
           <div>
             <h1 className='text-2xl font-bold'>💻 Computer Science Engineering</h1>
@@ -132,7 +131,6 @@ function ComputerScience() {
           </div>
         </div>
 
-        {/* Papers Section */}
         <div className='my-10'>
           <h2 className='text-xl font-bold mb-4'>🎓 Student Uploaded Papers</h2>
           {filteredPapers.length > 0 ? (
@@ -164,7 +162,6 @@ function ComputerScience() {
           )}
         </div>
 
-        {/* Upload Form */}
         <div className='p-6 rounded-xl shadow-md bg-[#e3f2fd] border border-blue-100'>
           <h2 className='mb-4 font-bold text-lg'>📤 Contribute Papers</h2>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>

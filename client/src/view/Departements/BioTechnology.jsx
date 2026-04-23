@@ -12,6 +12,7 @@ import {
 import PhotoViwer from '../../components/PhotoViwer';
 import Button from '../../components/Button';
 import toast, { Toaster } from 'react-hot-toast';
+import Search from '../../components/Search';
 
 function BioTechnology() {
   const [uploadedPapers, setUploadedPapers] = useState([])
@@ -95,7 +96,7 @@ function BioTechnology() {
 
     const dataToSend = { ...formData, department: "BioTechnology" };
     const response = await axios.post('http://localhost:8030/questions', dataToSend);
-    
+
     if (response.data.success) {
       toast.success('Question paper uploaded successfully');
       setFormData({ subject: "", semester: "", year: "", paperUrl: [] });
@@ -118,8 +119,7 @@ function BioTechnology() {
     <div className='bg-gray-50 min-h-screen'>
       <Navbar />
       <div className='p-4 max-w-7xl mx-auto'>
-        
-        {/* Header with Search */}
+
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6'>
           <div>
             <h1 className='text-2xl font-bold'>👩‍🔬 BioTechnology</h1>
@@ -127,16 +127,15 @@ function BioTechnology() {
           </div>
 
           <div className='w-full md:w-80'>
-            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           </div>
         </div>
 
-        {/* Papers Display Section */}
         <div className='my-10'>
           <h2 className='text-xl font-bold mb-4 flex items-center gap-2'>
             <span>📄</span> Student Uploaded Papers
           </h2>
-          
+
           {filteredPapers.length > 0 ? (
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 overflow-y-auto max-h-96 p-2'>
               {filteredPapers.map((paper) => (
@@ -159,12 +158,11 @@ function BioTechnology() {
             </div>
           ) : (
             <div className="bg-white p-8 rounded-lg border border-dashed border-gray-300 text-center">
-               <p className="text-gray-500 italic">No papers found matching "{searchTerm}"</p>
+              <p className="text-gray-500 italic">No papers found matching "{searchTerm}"</p>
             </div>
           )}
         </div>
 
-        {/* Upload Form Section */}
         <div className='p-6 rounded-lg shadow-md bg-[#e3f2fd] border border-blue-100'>
           <h2 className='mb-4 font-bold'>📤 Upload BioTech Resources</h2>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -201,7 +199,7 @@ function BioTechnology() {
 
           <div className='my-4'>
             <label className='block font-bold mb-2'>📸 Select Question Paper Images</label>
-            <input 
+            <input
               type="file"
               ref={fileInputRef}
               disabled={isUploading}

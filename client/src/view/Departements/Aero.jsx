@@ -124,13 +124,11 @@ function Aero() {
             <p className='text-gray-500'>Complete semester-wise question papers</p>
           </div>
           
-          {/* SEARCH BAR UI */}
           <div className="w-full md:w-1/3">
             <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </div>
         </div>
 
-        {/* DISPLAY FILTERED RESULTS */}
         <div className='my-10'>
           <h2 className='mb-4 font-bold text-xl'>🎓 Student Uploaded Papers</h2>
           {filteredPapers.length > 0 ? (

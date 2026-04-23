@@ -10,7 +10,7 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    type: "suggestion", // Default type
+    type: "suggestion",
     subject: "",
     description: ""
   })
@@ -24,7 +24,6 @@ function Contact() {
 
     setLoading(true);
     try {
-      // Replace with your actual endpoint (e.g., http://localhost:8030/support)
       const response = await axios.post('http://localhost:8030/support', formData);
       
       if (response.data.success) {
@@ -58,11 +57,9 @@ function Contact() {
             </div>
           </div>
 
-          {/* Form Section */}
           <div className='md:w-2/3 p-8'>
             <form onSubmit={handleSubmit} className='space-y-5'>
               
-              {/* Toggle Switch */}
               <div className='flex bg-gray-100 p-1 rounded-lg w-fit'>
                 <button
                   type="button"

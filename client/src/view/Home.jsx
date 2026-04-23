@@ -56,11 +56,10 @@ function Home() {
 
         <div className='bg-[#f0f4f8] p-5 rounded-lg mt-10 '>
           <h2>Why Choose Us?</h2>
-          <ul style={{ fontSize: '16px', lineHeight: '1.8', color: '#555' }}>
+          <ul className='font-[16px] '>
             <li>📚 Comprehensive collection of previous semester question papers</li>
             <li>🎯 Organized by department for easy navigation</li>
             <li>⏰ Updated regularly with latest exam papers</li>
-            <li>✨ Free access to study materials</li>
           </ul>
         </div>
 
@@ -69,7 +68,6 @@ function Home() {
           <ol style={{ fontSize: '16px', lineHeight: '1.8', color: '#555' }}>
             <li>Select your department from the list above</li>
             <li>Browse through available semester papers</li>
-            <li>Download and review the questions</li>
             <li>Practice and prepare for your exams</li>
           </ol>
         </div>

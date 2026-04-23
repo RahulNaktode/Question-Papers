@@ -12,6 +12,7 @@ import {
 import PhotoViwer from '../../components/PhotoViwer';
 import Button from '../../components/Button';
 import toast, { Toaster } from 'react-hot-toast';
+import Search from '../../components/Search';
 
 function Mechanical() {
   const [uploadedPapers, setUploadedPapers] = useState([])
@@ -124,7 +125,6 @@ function Mechanical() {
       <Navbar />
       <div className='p-4 max-w-7xl mx-auto'>
         
-        {/* Header and Search Bar */}
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6'>
           <div>
             <h1 className='text-2xl font-bold'>⚙️ Mechanical Engineering</h1>
@@ -136,7 +136,6 @@ function Mechanical() {
           </div>
         </div>
 
-        {/* Papers Display Section */}
         <div className='my-10'>
           <h2 className='text-xl font-semibold mb-4'>🎓 Student Uploaded Papers</h2>
           {filteredPapers.length > 0 ? (
@@ -168,7 +167,6 @@ function Mechanical() {
           )}
         </div>
 
-        {/* Upload Form Section */}
         <div className='p-6 rounded-xl shadow-md bg-[#e3f2fd] border border-blue-100'>
           <h2 className='mb-4 font-bold text-lg text-blue-800'>📤 Contribute Mechanical Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">

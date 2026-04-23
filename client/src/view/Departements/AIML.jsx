@@ -12,6 +12,7 @@ import {
 import PhotoViwer from '../../components/PhotoViwer';
 import Button from '../../components/Button';
 import toast, { Toaster } from 'react-hot-toast';
+import Search from '../../components/Search';
 
 function AIML() {
   const [uploadedPapers, setUploadedPapers] = useState([])
@@ -131,7 +132,6 @@ function AIML() {
           </div>
         </div>
 
-        {/* Papers Grid */}
         <div className='my-10'>
           <h2 className='mb-4 font-bold text-xl flex items-center gap-2'>
             <span>🎓</span> Student Uploaded Papers
@@ -165,7 +165,6 @@ function AIML() {
           )}
         </div>
 
-        {/* Upload Form Section */}
         <div className='p-6 rounded-xl shadow-md bg-[#e3f2fd] border border-blue-100'>
           <h2 className='mb-4 font-bold text-lg'>📤 Contribute Question Papers</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
