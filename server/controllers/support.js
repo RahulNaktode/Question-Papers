@@ -4,7 +4,6 @@ const postSupport = async (req, res) => {
     try {
         const { name, email, type, subject, description } = req.body;
 
-        // Validation
         if (!name || !email || !subject || !description) {
             return res.json({ 
                 success: false, 

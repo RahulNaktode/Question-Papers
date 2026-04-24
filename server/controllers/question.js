@@ -1,7 +1,6 @@
 import Question from "../models/Question.js";
 
 const postQuestion = async (req, res) => {
-    // 1. Department field ko destructure karein
     const { subject, semester, year, paperUrl, department } = req.body;
 
     try {
@@ -10,7 +9,7 @@ const postQuestion = async (req, res) => {
             semester,
             year,
             paperUrl,
-            department // Isse database mein save karein
+            department 
         });
 
         const savedQuestionPaper = await newQuestionPaper.save();
@@ -31,12 +30,11 @@ const postQuestion = async (req, res) => {
 
 const getQuestions = async (req, res) => {
     try {
-        // 2. Query parameter se department uthayein (e.g., /questions?department=Aero)
         const { department } = req.query;
 
         let filter = {};
         if (department) {
-            filter.department = department; // Agar dept bheja hai to filter lagao
+            filter.department = department;
         }
 
         const questions = await Question.find(filter);

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router'
 import Button from '../components/Button'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -71,13 +72,8 @@ function Home() {
             <li>Practice and prepare for your exams</li>
           </ol>
         </div>
-
-        <div className='bg-[#e8f5e9] p-5 rounded-lg mt-10 flex items-center justify-center'>
-          <p className='text-[#555] font-[16px]'>
-            📧 For any queries or to contribute question papers, contact us at <strong>rynaktode11@gmail.com</strong>
-          </p>
-        </div>
       </div>
+      <Footer />
     </div>
   )
 }
