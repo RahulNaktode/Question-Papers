@@ -32,7 +32,6 @@ function Aero() {
     getQuestionPapers();
   }, []);
 
-  // Filter Logic: Filters by Subject OR Semester
   const filteredPapers = uploadedPapers.filter((paper) => {
     const searchLower = searchTerm.toLowerCase();
     return (

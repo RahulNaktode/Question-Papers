@@ -15,6 +15,8 @@ import ArtificialIntelligence from './view/Departements/AIML.jsx'
 import Biotechnology from './view/Departements/BioTechnology.jsx'
 import FirstYear from './view/Departements/FirstYear.jsx'
 import Contact from './view/Contact.jsx'
+import Signup from './view/Signup.jsx'
+import Login from './view/Login.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -32,6 +34,8 @@ createRoot(document.getElementById('root')).render(
     <Route path='/aiml' element={<ArtificialIntelligence />} />
     <Route path='/biotech' element={<Biotechnology />} />
     <Route path='/firstyear' element={<FirstYear />} />
+    <Route path='/signup' element={<Signup />} />
+    <Route path='/login' element={<Login />} />
   </Routes>
   </BrowserRouter>
 )
